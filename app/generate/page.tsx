@@ -236,13 +236,15 @@ export default function GeneratePage() {
                         {suggestion.reason}
                       </p>
                       <div className="flex justify-end">
-                        <button
-                          onClick={() => handleAmazonSearch(suggestion.name)}
+                        <a
+                          href={`https://www.amazon.com.tr/s?k=${encodeURIComponent(suggestion.name)}&tag=giftgenius002-21`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105"
-                        >
+                           >
                           <ExternalLink className="w-4 h-4" />
                           Amazon'da Gör
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
