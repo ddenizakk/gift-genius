@@ -61,7 +61,7 @@ export default function GeneratePage() {
 
   const handleAmazonSearch = (giftName: string) => {
     const searchQuery = encodeURIComponent(giftName);
-    window.open(`https://www.amazon.com.tr/s?k=${searchQuery}`, '_blank');
+    window.open(`https://www.amazon.com.tr/s?k=${searchQuery}&tag=giftgenius002-21`, '_blank');
   };
 
   return (
