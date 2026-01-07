@@ -31,10 +31,10 @@ export default function GeneratePage() {
       alert('Lütfen tüm alanları doldurun');
       return;
     }
-    
+
     setLoading(true);
     setSuggestions([]); // Önceki önerileri temizle
-    
+
     try {
       const response = await fetch('/api/generate-gift', {
         method: 'POST',
@@ -50,7 +50,7 @@ export default function GeneratePage() {
 
       const data = await response.json();
       setSuggestions(data.suggestions);
-      
+
     } catch (error) {
       console.error('Hata:', error);
       alert('Bir hata oluştu. Lütfen tekrar deneyin.');
@@ -241,7 +241,7 @@ export default function GeneratePage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105"
-                           >
+                        >
                           <ExternalLink className="w-4 h-4" />
                           Amazon'da Gör
                         </a>
